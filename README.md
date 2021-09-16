@@ -1,3 +1,27 @@
+# Vježba: Dependency management
+
+Trajanje: 20min (do 19:30)
+
+
+U postojeću React aplikaciju dodati sljedeće:
+
+1. Instalirati packet nanoid i proučiti dokumentaciju.
+
+2. Dodati paragraf u aplikaciju i ispisati:
+
+
+"Your unique ID is " te rezultat poziva nanoid nakon toga (dakle dobiveni unique ID).
+
+
+3. Formatirati datum dobiven kroz dayjs prema formatu "MMMM DD YYYY, HH:mm:ss"
+
+
+BONUS:
+
+Napravite git repozitorij od vaše aplikacije, dodajte ga na GitHub, i deployajte na Netlify :)
+
+------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
