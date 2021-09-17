@@ -3,8 +3,8 @@ import './App.css';
 /* import * as dayjs from "dayjs"; */
 /* import { nanoid } from "nanoid"; */
 /* import x, { getId } from "./helpers"; prvo smo importali def. i dali ime x, i onda named import koji pišemo u {} i onda dolje u p upisujemo {x()} i {getId()} */
-import { getId } from "./helpers"; // modul koji se zove helpers
-import constant, { getRandomName, getRandomColor} from "./random";
+// import { getId } from "./helpers"; // modul koji se zove helpers
+// import constant, { getRandomName, getRandomColor} from "./random";
 import CurrentDate from './components/CurrentDate';
 import UniqueId from './components/UniqueId';
 import UserInfo from './components/UserInfo';
