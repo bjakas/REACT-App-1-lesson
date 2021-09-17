@@ -21,7 +21,6 @@ function App() {
         <CurrentDate />
         <UniqueId />
         <UserInfo />
-        <p>Word of every single day is constant and is: {constant}</p>
         <a
           className="App-link"
           href="https://github.com/bjakas"
