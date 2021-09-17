@@ -4,6 +4,7 @@ import './App.css';
 /* import { nanoid } from "nanoid"; */
 /* import x, { getId } from "./helpers"; prvo smo importali def. i dali ime x, i onda named import koji pišemo u {} i onda dolje u p upisujemo {x()} i {getId()} */
 import { getCurrentDate, getId } from "./helpers";
+import constant, { getRandomName, getRandomColor} from "./random";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </p>
         <p>Today is {getCurrentDate()}</p>
         <p>Your unique id is: {getId()}</p>
+        <p>Name of the day is: {getRandomName()}</p>
+        <p>Color of the day is: {getRandomColor()}</p>
+        <p>Word of every single day is constant and is: {constant}</p>
         <a
           className="App-link"
           href="https://github.com/bjakas"

@@ -22,6 +22,43 @@ Napravite git repozitorij od vaše aplikacije, dodajte ga na GitHub, i deployajt
 
 ------------
 
+# Vježba: Modules
+
+Trajanje: 30min (do 21:00)
+
+
+U postojeću React aplikaciju dodati sljedeće:
+
+
+1. Dodajte modul random.js
+
+
+2. U modulu random.js implementirajte funkciju za dohvaćanje nasumičnog imena iz niza imena. Funkcija neka se zove getRandomName().
+
+
+3. U modulu random.js implementirajte funkciju za dohvaćanje nasumične boje iz niza boja. Funkcija neka se zove getRandomColor().
+
+
+4. U modulu random.js dodajte default export konstante "RANDOM".
+
+
+5. Modul random.js mora imati dva named exporta: getRandomName i getRandomColor
+
+
+6. Importajte random.js modul u App.js i iskoristite getRandomName() i getRandomColor() funkcije da bi u paragrafu ispisali nasumično ime i boju. Importajte defaultni export i ispišite ga u zaseban paragraf.
+
+
+BONUS:
+
+Napravite git repozitorij od vaše aplikacije (ako niste), dodajte ga na GitHub (ako niste), i deployajte na Netlify :)
+
+
+SAVJET:
+
+Ako ne znate napraviti da se nasumično vadi element iz niza, razočarali ste me, ali za potrebe vježbe samo vratite neku vrijednost. I obavezno vježbajte :)
+
+------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
