@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import * as dayjs from "dayjs";
-import { nanoid } from "nanoid";
+/* import * as dayjs from "dayjs"; */
+/* import { nanoid } from "nanoid"; */
+/* import x, { getId } from "./helpers"; prvo smo importali def. i dali ime x, i onda named import koji pišemo u {} i onda dolje u p upisujemo {x()} i {getId()} */
+import { getCurrentDate, getId } from "./helpers";
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
         <p>
           This app is going to be a chat app.
         </p>
-        <p>Today is {dayjs().format("MMMM DD YYYY, HH:mm:ss")}</p>
-        <p>Your unique id is: {nanoid()}</p>
+        <p>Today is {getCurrentDate()}</p>
+        <p>Your unique id is: {getId()}</p>
         <a
           className="App-link"
           href="https://github.com/bjakas"
