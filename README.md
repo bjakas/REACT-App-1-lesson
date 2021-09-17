@@ -172,6 +172,8 @@ Bonus:
 
 - Commitajte izmjene u repozitorij, pushajte na GitHub, deployajte sa Netlify :)
 
+- Probajte vrijednost iz getRandomColor() koristiti da bi obojali tekst u komponenti u tu boju (koristite style={{ color: ... }} atribut na JSX elementu)
+
 ------------
 
 
