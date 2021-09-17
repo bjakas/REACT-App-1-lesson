@@ -59,6 +59,83 @@ Ako ne znate napraviti da se nasumično vadi element iz niza, razočarali ste me
 
 ------------
 
+# VJEŽBA na predavanju - helpers.js file izbrišemo i napravimo mapu helpers
+
+## donji kod je kod koji ćemo rascjepkati
+
+/* ne treba nam više jer smo napravili mapu s modulima
+
+import * as dayjs from "dayjs";
+import { nanoid } from "nanoid";
+
+export function getCurrentDate() { // primjer exporta named funkcije
+return dayjs().format("MMMM DD YYYY, HH:mm:ss");
+}
+
+export function getId() { // primjer exporta named funkcije
+  return nanoid();
+}
+
+// export default getCurrentDate;  primjer def. exporta; u app.js smo importali i uključili pod proizvoljnim imenom x
+
+// izaberemo na koji način ćemo exportat named ili default
+*/
+
+
+------------
+
+# Vježba: Modules
+
+Trajanje: 15min (do 18:55)
+
+
+U postojeću React aplikaciju dodati sljedeće:
+
+
+1. Zamijenite random.js modul sa random mapom.
+
+
+2. Funkcije iz random.js modula izdvojite u zasebne module unutar random mape.
+
+
+3. Stavite index.js datoteku u random mapu i kroz nju exportajte module funkcija iz točke 2.
+
+
+4. Importajte funkcije iz točke 2 u App.js
+
+
+Savjet:
+
+- Vodite se primjerom iz helpers mape
+
+- Defaultni export konstante RANDOM ne morate izdvajati u zaseban modul, napravite od njega defaultni export index.js modula u random mapi
+
+# random.js file izbrišemo i napravimo mapu s modulima
+
+## donji kod je kod koji ćemo rascjepkati
+
+/* ne treba nam više jer smo napravili mapu s modulima
+
+export function getRandomName() {
+  const names = ["Otto", "Kimi", "Charles", "Roko", "Gigi", "Manu", "Alex", "Peter"];
+  const namesResult = names[Math.floor(Math.random() * names.length)];
+  return namesResult;
+}
+
+export function getRandomColor() {
+  const colors = ["yellow", "blue", "magenta", "green", "lime", "grey", "white", "black"];
+  const colorResult = colors[Math.floor(Math.random() * colors.length)];
+  return colorResult;
+}
+
+const RANDOM = "RANDOM";
+
+export default RANDOM; // ILI export default "RANDOM"; ali bolji je lijevi pristup
+*/
+
+------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
