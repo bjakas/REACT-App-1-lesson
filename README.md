@@ -135,6 +135,45 @@ export default RANDOM; // ILI export default "RANDOM"; ali bolji je lijevi prist
 
 ------------
 
+# Vježba: JSX
+
+Trajanje: 40min (do 20:30)
+
+
+U postojeću React aplikaciju dodati sljedeće:
+
+
+1. Izdvojite tri nove komponente iz postojećeg App.js JSX-a
+
+1a. Komponenta CurrentDate treba prikazivati trenutni datum
+
+1b. Komponenta UniqueId treba prikazivati jedinstveni ID
+
+1c. Komponenta UserInfo treba prikazivati random name i random color
+
+
+2. Koristite tri nove komponente u App komponenti na mjestima gdje su se i prije nalazile
+
+
+3. Svaku komponentu iz točke 1 prebacite u zasebne module unutar mape components (npr. components/CurrentDate.js, components/UniqueId.js, ...)
+
+
+4. Importajte komponente iz točke 3 u App komponentu i iskoristite ih
+
+
+Savjet:
+
+- Za točku 3 ne morate raditi index.js, možete samo napraviti modul npr. components/CurrentDate.js
+
+- Kod točke 3 ne zaboravite importati dependency module (npr. helpers, random) i uzmite u obzir njihove relativne putanje
+
+
+Bonus:
+
+- Commitajte izmjene u repozitorij, pushajte na GitHub, deployajte sa Netlify :)
+
+------------
+
 
 # Getting Started with Create React App
 

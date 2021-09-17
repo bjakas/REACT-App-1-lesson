@@ -3,8 +3,11 @@ import './App.css';
 /* import * as dayjs from "dayjs"; */
 /* import { nanoid } from "nanoid"; */
 /* import x, { getId } from "./helpers"; prvo smo importali def. i dali ime x, i onda named import koji pišemo u {} i onda dolje u p upisujemo {x()} i {getId()} */
-import { getCurrentDate, getId } from "./helpers"; // modul koji se zove helpers
+import { getId } from "./helpers"; // modul koji se zove helpers
 import constant, { getRandomName, getRandomColor} from "./random";
+import CurrentDate from './components/CurrentDate';
+import UniqueId from './components/UniqueId';
+import UserInfo from './components/UserInfo';
 
 function App() {
   return (
@@ -15,10 +18,9 @@ function App() {
         <p>
           This app is going to be a chat app.
         </p>
-        <p>Today is {getCurrentDate()}</p>
-        <p>Your unique id is: {getId()}</p>
-        <p>Name of the day is: {getRandomName()}</p>
-        <p>Color of the day is: {getRandomColor()}</p>
+        <CurrentDate />
+        <UniqueId />
+        <UserInfo />
         <p>Word of every single day is constant and is: {constant}</p>
         <a
           className="App-link"
