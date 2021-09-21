@@ -1,3 +1,4 @@
+import React from "react"; // ne koristimo ga trenutno, ali ga možemo ostaviti 
 import logo from './logo.svg';
 import './App.css';
 /* import * as dayjs from "dayjs"; */
@@ -8,6 +9,7 @@ import constant from "./random";
 import CurrentDate from './components/CurrentDate';
 import UniqueId from './components/UniqueId';
 import UserInfo from './components/UserInfo';
+import CoinToss from "./components/CoinToss";
 
 /* 1 NAČIN - tehinka s varijablom
 function CoinToss() {
@@ -32,6 +34,7 @@ function CoinToss() {
 // 3 NAČIN - s && (kada nemamo nužno else, kada je uvjet ispunjen prikaži nešto ili se ne prikazuje jer uvjet nije ispunjen) - ako je isHeads u true ispiši heads, a ako nije onda ispišti tails 
 // zgodno kada imamo korisnika s određenim ovlastima; isAdministrator onda renderaj neku komponentu, ako nije onda drugu
 
+/*
 function CoinToss() {
   const isHeads = Math.random() > 0.5;
 
@@ -39,6 +42,23 @@ function CoinToss() {
     <span>The result of coin toss is {isHeads && "heads"}{!isHeads && "tails"}.</span>
   );
 }
+*/
+
+/*
+function Greet({greeting, name, children}) {
+  //console.log(`${greeting} ${name}!`);
+  return (
+    <div>
+      <div>{greeting} {name}!
+      </div>
+      {children}
+    </div>
+    );
+}
+*/
+
+
+// greet({greeting: "Aloha", name: "Domagoj"});
 
 function App() {
   return (

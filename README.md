@@ -175,6 +175,43 @@ Bonus:
 - Probajte vrijednost iz getRandomColor() koristiti da bi obojali tekst u komponenti u tu boju (koristite style={{ color: ... }} atribut na JSX elementu)
 
 ------------
+# Vježba: JSX (Function, Class)
+
+Trajanje: 25min (19:25)
+
+
+U postojećoj React aplikaciji potrebno je napraviti sljedeće:
+
+
+1. Prepisati CoinToss komponentu u class komponentu.
+
+1a. Odvojiti komponentu u zaseban modul unutar mape components.
+
+1b. Importati i koristiti CoinToss komponentu u App komponenti.
+
+
+2. Napisati Greet komponentu kao class komponentu.
+
+2a. Greet komponenta treba primiti propse greeting, name, i children.
+
+2b. Greet komponenta treba biti u zasebnom modulu unutar mape components.
+
+2c. Greet komponenta se treba koristiti unutar komponente UserInfo tako da zamijeni liniju koja ispisuje korisnikovo ime (getRandomName()) (dakle, Greet će sada služiti za prikazivanje pozdrava na temelju getRandomName() imena).
+
+
+BONUS:
+
+Tko hoće, neka pusha izmjene na GitHuba i tako napravi novi deploy na Netlify :)
+
+
+SAVJET:
+
+1. Obrišite funkcijsku Greet komponentu, ne treba vam.
+
+2. Ne zaboravite ispravno importati Gret u UserInfo.
+
+
+------------
 
 
 # Getting Started with Create React App
