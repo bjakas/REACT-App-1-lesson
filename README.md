@@ -208,8 +208,42 @@ SAVJET:
 
 1. Obrišite funkcijsku Greet komponentu, ne treba vam.
 
-2. Ne zaboravite ispravno importati Gret u UserInfo.
+2. Ne zaboravite ispravno importati Greet u UserInfo.
 
+
+------------
+Vježba: State
+
+Trajanje: 20min (21:00)
+
+
+U postojećoj React aplikaciji potrebno je napraviti sljedeće:
+
+
+1. Preseliti LikeButton komponentu u zaseban modul unutar components mape
+
+1a. Importati i koristiti LikeButton komponentu u App komponenti
+
+
+2. Doraditi CoinToss komponentu na sljedeći način:
+
+2a. Dodati button sa nazivom "Toss the coin"
+
+2b. Na click buttona ponoviti logiku za određivanje glave / pisma
+
+2c. Prikazati rezultat u komponenti
+
+
+BONUS:
+
+Push na repo, deploy na Netlify :)
+
+
+SAVJET:
+
+1. Kod CoinToss više-manje možete pratiti istu logiku kao i u LikeButton, samo što ćete imati drugačiji state i njegovo settanje.
+
+- https://www.w3schools.com/react/react_state.asp
 
 ------------
 

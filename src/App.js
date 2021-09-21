@@ -1,4 +1,3 @@
-import React from "react"; // ne koristimo ga trenutno, ali ga možemo ostaviti 
 import logo from './logo.svg';
 import './App.css';
 /* import * as dayjs from "dayjs"; */
@@ -10,6 +9,10 @@ import CurrentDate from './components/CurrentDate';
 import UniqueId from './components/UniqueId';
 import UserInfo from './components/UserInfo';
 import CoinToss from "./components/CoinToss";
+import LikeButton from './components/LikeButton';
+
+
+
 
 /* 1 NAČIN - tehinka s varijablom
 function CoinToss() {
@@ -57,7 +60,6 @@ function Greet({greeting, name, children}) {
 }
 */
 
-
 // greet({greeting: "Aloha", name: "Domagoj"});
 
 function App() {
@@ -67,6 +69,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to my app!</h1>
         <p>
+          <LikeButton />
           This app is going to be a chat app. <CoinToss />
         </p>
         <CurrentDate />
