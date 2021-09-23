@@ -246,6 +246,41 @@ SAVJET:
 - https://www.w3schools.com/react/react_state.asp
 
 ------------
+Vježba: Statefull i stateless components
+
+Trajanje: 30min (20:20)
+
+
+U postojećoj React aplikaciji potrebno je napraviti sljedeće:
+
+
+1. Preseliti LikeButton komponentu u mapu components/LikeButton
+
+1a. Iz komponente izdvojimo stateful (logički) dio u npr. LikeButton.container.js
+
+1b. Iz komponente izdvojimo stateless (prezentacijski) dio u npr. LikeButton.component.js
+
+1c. Putem index.js iz components/LikeButton exportamo stateful komponentu
+
+1d. Koristimo stateful komponentu LikeButton u App.js
+
+
+2. Prezentacijskoj komponenti LikeButton definirati PropTypes
+
+
+3. Prezentacijskoj komponenti CoinToss definirati PropTypes
+
+
+BONUS:
+
+Push na repo, deplo na Netlify :)
+
+
+SAVJET:
+
+1. Nemojte prepisivati LikeButton logički iz funkcije u klasu, koristite ovo što imate.
+
+------------
 
 
 # Getting Started with Create React App
