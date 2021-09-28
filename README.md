@@ -212,7 +212,7 @@ SAVJET:
 
 
 ------------
-Vježba: State
+# Vježba: State
 
 Trajanje: 20min (21:00)
 
@@ -246,7 +246,8 @@ SAVJET:
 - https://www.w3schools.com/react/react_state.asp
 
 ------------
-Vježba: Statefull i stateless components
+
+# Vježba: Statefull i stateless components
 
 Trajanje: 30min (20:20)
 
@@ -282,6 +283,47 @@ SAVJET:
 
 ------------
 
+# Vježba: Props, state, forms, itd.
+
+Trajanje: 35min (19:35)
+
+
+U postojećoj React aplikaciji potrebno je napraviti sljedeće:
+
+
+1. U MessageForm komponentu dodati input za naslov poruke
+
+1a. Input treba biti kontroliran od strane statea komponente (npr. state ima property "title")
+
+1b. Input treba biti type text
+
+1c. Input se treba uzeti u obzir kada se submita obrazac (mora biti dio statea obrasca na submit obrasca)
+
+
+2. U components mapi definirati novu komponentu Message
+
+2a. Komponenta Message mora biti realizirana kroz index.js modul u mapi components/Message
+
+2b. Komponenta mora biti funkcija
+
+2c. Komponenta mora prikazati title, message
+
+2d. Komponenta mora imati klasu "message" ako je isImportant u false, ili "important-message" ako je isImportant u true
+
+2e. Stilizirati komponentu prema message i important-message klasama
+
+2f. U komponenti iskoristiti i komponente CurrentDate, UserInfo, UniqueId
+
+2g. Koristiti Message komponentu (komponenta za prikaz poruke) u App komponenti umjesto trenutnog prikaza
+
+
+BONUS:
+
+1. Razdvojite MessageForm na stateful i stateless dio
+
+2. Push na repo, deplo na Netlify :)
+
+------------
 
 # Getting Started with Create React App
 

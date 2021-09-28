@@ -1,7 +1,7 @@
 import React from "react"; // moramo jer je riječ o classi
 import CoinTossComponent from "./CoinToss.component";
 
-export default class CoinToss extends React.Component {
+export default class CoinTossContainer extends React.Component {
   /* state definiramo kroz konstruktor
   constructor() {
     super(); // nadkonstruktor; potreban da instanciramo i klasu koju smo naslijedili
@@ -11,18 +11,17 @@ export default class CoinToss extends React.Component {
   }
   */
   // ili kroz state
-  state = {
-    isHeads: Math.random() > 0.5, // ili isHeads: false;
+  state = { // classe nemaju podršku za hookove pa koristimo life cycle metode i property kao što je state
+    isHeads: Math.random() > 0.5, // ili isHeads: false; početna vrijednost
   }
 
   tossCoin = () => {
-    this.setState({ isHeads: Math.random() > 0.5} ); // metoda za bacanje novčića stavimo je kao dio classe, prototypea umjesto u render metodi, makar i to možemo
+    this.setState({ isHeads: Math.random() > 0.5} ); // metoda za bacanje novčića stavimo je kao dio classe, prototypea umjesto u render metodi, makar i to možemo; pozivom funkcije tossCoin promijeni se vrijednost u stateu i izazove se novi update i render componente i prikaže se vrijednost iz statea ovisno o evaluaciji isHeads && "heads"...true ili false
   };
 
-
-
-  render() {
+  render() { // metoda koja se pozove da bi se komponenta crtala na ekran, tj. prikazala u virtualnom DOM-u
     // const { isHeads } = this.state; // destrukturiramo ili dolje pišemo this.state.isHeads
+    // console.log(this.state.isHeads); // ako se sa svakim klikom buttona pozove console.log u renderu to znači da je button povezan...ovo je samo za provjeru, nije nužni dio koda
     return (<CoinTossComponent
     isHeads={this.state.isHeads}
     tossCoin={this.tossCoin}

@@ -13,9 +13,9 @@ export default function LikeButtonContainer() {
     console.log(count); // klikom na button ispišu se klikovi
   };
 
-  return (<LikeButtonComponent
-    count={count}
-    incrementCount={incrementCount}
-    />
+  return (<LikeButtonComponent // ubacimo LikeButtonComponent
+    count={count} // brojaču dodijelimo count
+    incrementCount={incrementCount} // kada se stisne button dodijelimo funkciju incrementCount; mi tu predamo funkciju koja će se pozvati kada se klikne na button, znači tu ne pozivamo funkciju
+    /> // bitno zatvoriti s kosom crtom da zna da nema children elemente ova komponenta!
     );
 }

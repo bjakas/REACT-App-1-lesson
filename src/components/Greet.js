@@ -6,10 +6,11 @@ export default class Greet extends React.Component {
     const { greeting, name, children } = this.props;
     return (
       <div>
-      <div>{greeting} {name}!
+        <div>
+          {greeting} {name}!
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
     );
   } 
 }

@@ -2,10 +2,6 @@
 /* import { nanoid } from "nanoid"; */
 /* import x, { getId } from "./helpers"; prvo smo importali def. i dali ime x, i onda named import koji pišemo u {} i onda dolje u p upisujemo {x()} i {getId()} */
 // import { getCurrentDate, getId } from "./helpers"; // modul koji se zove helpers
-import logo from './logo.svg';
-import './App.css';
-import MessageForm from './components/MessageForm';
-import { useState } from "react";
 // import constant from "./random"; <p>The random constant is {constant}</p>
 // import CurrentDate from './components/CurrentDate';
 // import UniqueId from './components/UniqueId';
@@ -21,14 +17,25 @@ import { useState } from "react";
         <UniqueId />
         <UserInfo />
 */
+import './App.css';
+import MessageForm from './components/MessageForm';
+import { useState } from "react";
+import Message from './components/Message';
+
 function App() {
-  const [messageObject, setMessageObject] = useState(null);
+  const [messageObject, setMessageObject] = useState(null); // dali smo ime stateu messageObject, a funkciji setMessageObject
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Welcome to my app!</h1>
-        {messageObject !== null &&<div>{messageObject.message}</div>}
+        {messageObject !== null && (
+          <Message 
+            isImportant={messageObject.isImportant}
+            message={messageObject.message}
+            title={messageObject.title}
+          />
+        )}
         <MessageForm onSendMessage={setMessageObject}/>
         <a
           className="App-link"
