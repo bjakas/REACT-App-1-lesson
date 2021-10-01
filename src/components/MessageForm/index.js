@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "./MessageForm.css";
 
 export default function MessageForm({ onSendMessage }) {
   const [state, setState] = useState({
@@ -43,33 +44,42 @@ export default function MessageForm({ onSendMessage }) {
 
   // obrazac koji reagira na submit event i ima inpute; vrijednost inputa se povlači iz statea, a putem onChangea obavještavaju o promjeni
 
-  return(
-    <form onSubmit={sendMessage}>
-      <input 
-        type="text" 
-        onChange={setTitle} 
-        value={state.title}
-        placeholder="Title">
-      </input>
-      <input 
-        type="text" 
-        onChange={setMessage} 
-        value={state.message}
-        placeholder="Message">
-      </input>
-      <label>
-        <input 
-        type="checkbox" 
-        onChange={setIsImportant} 
-        checked={state.isImportant} 
-        value="isImportant"> 
-        </input>
-        Important
-      </label>
-      <button type="submit">Send</button>
+  return (
+    <form className="MessageForm" onSubmit={sendMessage}>
+      <div className="MessageForm__row">
+        <input
+          type="text"
+          onChange={setTitle}
+          value={state.title}
+          placeholder="Title"
+        />
+      </div>
+      <div className="MessageForm__row">
+        <input
+          type="text"
+          onChange={setMessage}
+          value={state.message}
+          placeholder="Message"
+        />
+      </div>
+      <div className="MessageForm__row">
+        <label>
+          <input
+            type="checkbox"
+            onChange={setIsImportant}
+            value="isImportant"
+            checked={state.isImportant}
+          />
+          Important
+        </label>
+      </div>
+      <div className="MessageForm__row">
+        <button type="submit">Send</button>
+      </div>
     </form>
   );
 }
+
 
 MessageForm.propTypes = { // MessageForm ima proptype koji se zove onSendMessage i on mora biti funkcija
   onSendMessage: PropTypes.func,

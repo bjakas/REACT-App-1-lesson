@@ -325,6 +325,50 @@ BONUS:
 
 ------------
 
+# Vježba: Liste
+
+Trajanje: 45min (19:35)
+
+
+Na postojećoj aplikaciji potrebno je napraviti sljedeće:
+
+
+1. U App komponenti promijeniti state tako da se pohranjuje niz poruka, a ne jedna poruka
+
+1a. Inicijalno stanje statea je prazan niz
+
+
+2. U App komponenti napisati funkciju za rukovanje onSendMessage eventom (prop) od MessageForm komponente
+
+2a. Funkcija će pimiti message object iz MessageForm (dobiven na submit obrasca)
+
+2b. Funkcija će dodati message object u niz koji je dio statea App komponente (vidi točku 1)
+
+
+3. U App komponenti ispisati poruke iz niza u stateu
+
+3a. Mapirati objekte iz arrayja u stateu u Message komponente (u return dijelu)
+
+3b. Ako je array u stateu prazan, ispisati "No messages"
+
+3c. Ako je array u stateu pun, samo prikazati poruke u arrayju (bez dodatnih poruka) prema točki 3a
+
+
+SAVJET:
+
+1. Kod upisivanja poruke u array napraviti novi array koji će sadržavati sve trenutne poruke i staviti novu poruku na vrh ili početak, i stavite ga u state. ([...messageObjects, messageObject]).
+
+2. Ne brinite previše oko keyja, možete za početak koristiti index elementa poruke u nizu.
+
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :)
+
+2. Urediti CSS da liči na nešto :D
+
+------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

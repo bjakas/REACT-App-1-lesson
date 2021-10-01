@@ -1,0 +1,20 @@
+.MessageForm {
+  margin: 32px auto;
+  max-width: 320px;
+}
+.MessageForm__row {
+  margin: 16px 0;
+  text-align: left;
+}
+.MessageForm__row input[type="text"] {
+  display: block;
+  width: 100%;
+}
+.MessageForm__row button {
+  background-color: rgb(8, 8, 8);
+  border: none;
+  color: #fff;
+  padding: 4px;
+  display: block;
+  width: 100%;
+}
