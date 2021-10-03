@@ -1,10 +1,36 @@
-.message {
+.Message {
+  background: #91B39C;
   box-sizing: border-box;
-  border: 2px double green;
-  padding: 10px;
+  padding: 16px;
   text-align: left;
   border-radius: 10px;
 }
-.message.message--important {
-  border-color: red;
+
+.Message.Message--important {
+  background: #F7D8A3;
+}
+
+.Message .Message__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.Message .Message__author {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.Message .Message__id {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.Message .Message__text {
+  margin-bottom: 16px;
+}
+
+.Message .Message__date {
+  font-size: 0.8rem;
 }

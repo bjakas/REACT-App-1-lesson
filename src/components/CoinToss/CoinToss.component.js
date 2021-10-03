@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function CoinTossComponent({ isHeads, tossCoin}) { // button na click baca novčić
+export default function CoinTossComponent({ isHeads, tossCoin }) { // button na click baca novčić
   return (
     <span>
       <button onClick={tossCoin}>Toss the coin</button>

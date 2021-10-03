@@ -16,23 +16,23 @@ export default class CoinTossContainer extends React.Component {
   }
 
   tossCoin = () => {
-    this.setState({ isHeads: Math.random() > 0.5} ); // metoda za bacanje novčića stavimo je kao dio classe, prototypea umjesto u render metodi, makar i to možemo; pozivom funkcije tossCoin promijeni se vrijednost u stateu i izazove se novi update i render componente i prikaže se vrijednost iz statea ovisno o evaluaciji isHeads && "heads"...true ili false
+    this.setState({ isHeads: Math.random() > 0.5 }); // metoda za bacanje novčića stavimo je kao dio classe, prototypea umjesto u render metodi, makar i to možemo; pozivom funkcije tossCoin promijeni se vrijednost u stateu i izazove se novi update i render componente i prikaže se vrijednost iz statea ovisno o evaluaciji isHeads && "heads"...true ili false
   };
 
   render() { // metoda koja se pozove da bi se komponenta crtala na ekran, tj. prikazala u virtualnom DOM-u
     // const { isHeads } = this.state; // destrukturiramo ili dolje pišemo this.state.isHeads
     // console.log(this.state.isHeads); // ako se sa svakim klikom buttona pozove console.log u renderu to znači da je button povezan...ovo je samo za provjeru, nije nužni dio koda
     return (<CoinTossComponent
-    isHeads={this.state.isHeads}
-    tossCoin={this.tossCoin}
+      isHeads={this.state.isHeads}
+      tossCoin={this.tossCoin}
     />
     );
 
-      /* OVO MIČEMO
-      <span>
-        <button onClick={this.tossCoin}>Toss the coin</button>
-        The result of coin toss is {isHeads && "heads"}{!isHeads && "tails"}.
-        </span>*/
+    /* OVO MIČEMO
+    <span>
+      <button onClick={this.tossCoin}>Toss the coin</button>
+      The result of coin toss is {isHeads && "heads"}{!isHeads && "tails"}.
+      </span>*/
   }
 }
 
@@ -47,7 +47,7 @@ function CoinToss() {
     <span>The result of coin toss is {message}.</span>
     );
 }
-*/ 
+*/
 
 /* 2 NAČIN - s ternary opraterom (kada imamo else, kada moramo pokriti slučaj i kada je uvjet ispunjen i kada nije ispunjen što se treba prikazati) - cijeli uvjet stavimo u {}; unutar JSX-a evauliramo random number i vratimo heads ili tails ovisno o tome što se prikazuje
 

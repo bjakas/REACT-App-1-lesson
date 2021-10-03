@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import LikeButtonComponent from "./LikeButton.component";
 
 export default function LikeButtonContainer() {
@@ -16,6 +16,6 @@ export default function LikeButtonContainer() {
   return (<LikeButtonComponent // ubacimo LikeButtonComponent
     count={count} // brojaču dodijelimo count
     incrementCount={incrementCount} // kada se stisne button dodijelimo funkciju incrementCount; mi tu predamo funkciju koja će se pozvati kada se klikne na button, znači tu ne pozivamo funkciju
-    /> // bitno zatvoriti s kosom crtom da zna da nema children elemente ova komponenta!
-    );
+  /> // bitno zatvoriti s kosom crtom da zna da nema children elemente ova komponenta!
+  );
 }

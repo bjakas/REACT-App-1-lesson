@@ -4,11 +4,11 @@ import Greet from "./Greet"; // prvo importamo Greet da ga možemo koristiti
 export default function UserInfo() {
   const color = getRandomColor();
   return (
-      <Greet greeting={"Hello"} name={getRandomName()}>
+    <Greet greeting={"Hello"} name={getRandomName()}>
       (Color: <span style={{ color: color }}>{color}</span>)
-      </Greet>
-    ); 
-  }
+    </Greet>
+  );
+}
 
 // child od Greeta nam postaje Your color is <span style={{ color: color }}>{color}</span>
 

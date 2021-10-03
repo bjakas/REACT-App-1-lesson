@@ -369,6 +369,50 @@ BONUS:
 
 ------------
 
+# Vježba: Obrasci
+
+Trajanje: 30min (19:25)
+
+
+Na postojećoj aplikaciji potrebno je napraviti sljedeće:
+
+
+1. U MessageForm zamijeniti sve text input elemente sa novom TextInput komponentom
+
+1a. Povezati TextInput komponente sa stateom obrasca tako da je aplikacija i dalje funkcionalna
+
+
+2. U components mapu dodati komponentu Checkbox
+
+2a. Implementirati Checkbox komponentu po uzoru na TextInput
+
+2b. U MessageForm zamijeniti checkbox element sa Checkbox komponentom
+
+2c. Povezati Checkbox komponentu sa stateom obrasca tako da je aplikacija i dalje funkcionalna
+
+
+3. U components mapu dodati komponentu FormButton
+
+3a. Implementirati Button komponentu kako mislite da je najbolje :)
+
+3b. U MessageForm zamijeniti button sa FormButton komponentom
+
+3c. Povezati FormButton komponentu sa obrascem tako da je aplikacija i dalje funkcionalna
+
+
+SAVJET:
+
+1. Držite se šablone koju smo do sada radili (TextInput komponenta).
+
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :)
+
+2. Urediti CSS da liči na nešto :D
+
+------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

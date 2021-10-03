@@ -12,7 +12,7 @@ export default class Greet extends React.Component {
         {children}
       </div>
     );
-  } 
+  }
 }
 
 Greet.propTypes = {

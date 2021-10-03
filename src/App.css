@@ -3,3 +3,28 @@
   max-width: 780px;
   margin: 32px auto;
 }
+
+.App__header {
+  margin: 32px 0;
+}
+
+.App__main {
+  margin: 64px 0;
+}
+
+.App__footer {
+  margin: 32px 0;
+}
+
+.App__message-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.App__message-container .Message {
+  margin: 16px 0;
+}
+.App-link {
+  color: #EE8666;
+  text-decoration: none;
+}
