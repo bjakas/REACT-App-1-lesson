@@ -2,70 +2,57 @@
 
 Trajanje: 20min (do 19:30)
 
-
 U postojeću React aplikaciju dodati sljedeće:
 
 1. Instalirati packet nanoid i proučiti dokumentaciju.
 
 2. Dodati paragraf u aplikaciju i ispisati:
 
-
 "Your unique ID is " te rezultat poziva nanoid nakon toga (dakle dobiveni unique ID).
 
-
 3. Formatirati datum dobiven kroz dayjs prema formatu "MMMM DD YYYY, HH:mm:ss"
-
 
 BONUS:
 
 Napravite git repozitorij od vaše aplikacije, dodajte ga na GitHub, i deployajte na Netlify :)
 
-------------
+---
 
 # Vježba: Modules
 
 Trajanje: 30min (do 21:00)
 
-
 U postojeću React aplikaciju dodati sljedeće:
-
 
 1. Dodajte modul random.js
 
-
 2. U modulu random.js implementirajte funkciju za dohvaćanje nasumičnog imena iz niza imena. Funkcija neka se zove getRandomName().
-
 
 3. U modulu random.js implementirajte funkciju za dohvaćanje nasumične boje iz niza boja. Funkcija neka se zove getRandomColor().
 
-
 4. U modulu random.js dodajte default export konstante "RANDOM".
-
 
 5. Modul random.js mora imati dva named exporta: getRandomName i getRandomColor
 
-
 6. Importajte random.js modul u App.js i iskoristite getRandomName() i getRandomColor() funkcije da bi u paragrafu ispisali nasumično ime i boju. Importajte defaultni export i ispišite ga u zaseban paragraf.
-
 
 BONUS:
 
 Napravite git repozitorij od vaše aplikacije (ako niste), dodajte ga na GitHub (ako niste), i deployajte na Netlify :)
 
-
 SAVJET:
 
 Ako ne znate napraviti da se nasumično vadi element iz niza, razočarali ste me, ali za potrebe vježbe samo vratite neku vrijednost. I obavezno vježbajte :)
 
-------------
+---
 
 # VJEŽBA na predavanju - helpers.js file izbrišemo i napravimo mapu helpers
 
 ## donji kod je kod koji ćemo rascjepkati
 
-/* ne treba nam više jer smo napravili mapu s modulima
+/\* ne treba nam više jer smo napravili mapu s modulima
 
-import * as dayjs from "dayjs";
+import \* as dayjs from "dayjs";
 import { nanoid } from "nanoid";
 
 export function getCurrentDate() { // primjer exporta named funkcije
@@ -73,36 +60,29 @@ return dayjs().format("MMMM DD YYYY, HH:mm:ss");
 }
 
 export function getId() { // primjer exporta named funkcije
-  return nanoid();
+return nanoid();
 }
 
-// export default getCurrentDate;  primjer def. exporta; u app.js smo importali i uključili pod proizvoljnim imenom x
+// export default getCurrentDate; primjer def. exporta; u app.js smo importali i uključili pod proizvoljnim imenom x
 
 // izaberemo na koji način ćemo exportat named ili default
-*/
+\*/
 
-
-------------
+---
 
 # Vježba: Modules
 
 Trajanje: 15min (do 18:55)
 
-
 U postojeću React aplikaciju dodati sljedeće:
-
 
 1. Zamijenite random.js modul sa random mapom.
 
-
 2. Funkcije iz random.js modula izdvojite u zasebne module unutar random mape.
-
 
 3. Stavite index.js datoteku u random mapu i kroz nju exportajte module funkcija iz točke 2.
 
-
 4. Importajte funkcije iz točke 2 u App.js
-
 
 Savjet:
 
@@ -114,34 +94,32 @@ Savjet:
 
 ## donji kod je kod koji ćemo rascjepkati
 
-/* ne treba nam više jer smo napravili mapu s modulima
+/\* ne treba nam više jer smo napravili mapu s modulima
 
 export function getRandomName() {
-  const names = ["Otto", "Kimi", "Charles", "Roko", "Gigi", "Manu", "Alex", "Peter"];
-  const namesResult = names[Math.floor(Math.random() * names.length)];
-  return namesResult;
+const names = ["Otto", "Kimi", "Charles", "Roko", "Gigi", "Manu", "Alex", "Peter"];
+const namesResult = names[Math.floor(Math.random() * names.length)];
+return namesResult;
 }
 
 export function getRandomColor() {
-  const colors = ["yellow", "blue", "magenta", "green", "lime", "grey", "white", "black"];
-  const colorResult = colors[Math.floor(Math.random() * colors.length)];
-  return colorResult;
+const colors = ["yellow", "blue", "magenta", "green", "lime", "grey", "white", "black"];
+const colorResult = colors[Math.floor(Math.random() * colors.length)];
+return colorResult;
 }
 
 const RANDOM = "RANDOM";
 
 export default RANDOM; // ILI export default "RANDOM"; ali bolji je lijevi pristup
-*/
+\*/
 
-------------
+---
 
 # Vježba: JSX
 
 Trajanje: 40min (do 20:30)
 
-
 U postojeću React aplikaciju dodati sljedeće:
-
 
 1. Izdvojite tri nove komponente iz postojećeg App.js JSX-a
 
@@ -151,15 +129,11 @@ U postojeću React aplikaciju dodati sljedeće:
 
 1c. Komponenta UserInfo treba prikazivati random name i random color
 
-
 2. Koristite tri nove komponente u App komponenti na mjestima gdje su se i prije nalazile
-
 
 3. Svaku komponentu iz točke 1 prebacite u zasebne module unutar mape components (npr. components/CurrentDate.js, components/UniqueId.js, ...)
 
-
 4. Importajte komponente iz točke 3 u App komponentu i iskoristite ih
-
 
 Savjet:
 
@@ -167,28 +141,25 @@ Savjet:
 
 - Kod točke 3 ne zaboravite importati dependency module (npr. helpers, random) i uzmite u obzir njihove relativne putanje
 
-
 Bonus:
 
 - Commitajte izmjene u repozitorij, pushajte na GitHub, deployajte sa Netlify :)
 
 - Probajte vrijednost iz getRandomColor() koristiti da bi obojali tekst u komponenti u tu boju (koristite style={{ color: ... }} atribut na JSX elementu)
 
-------------
+---
+
 # Vježba: JSX (Function, Class)
 
 Trajanje: 25min (19:25)
 
-
 U postojećoj React aplikaciji potrebno je napraviti sljedeće:
-
 
 1. Prepisati CoinToss komponentu u class komponentu.
 
 1a. Odvojiti komponentu u zaseban modul unutar mape components.
 
 1b. Importati i koristiti CoinToss komponentu u App komponenti.
-
 
 2. Napisati Greet komponentu kao class komponentu.
 
@@ -198,11 +169,9 @@ U postojećoj React aplikaciji potrebno je napraviti sljedeće:
 
 2c. Greet komponenta se treba koristiti unutar komponente UserInfo tako da zamijeni liniju koja ispisuje korisnikovo ime (getRandomName()) (dakle, Greet će sada služiti za prikazivanje pozdrava na temelju getRandomName() imena).
 
-
 BONUS:
 
 Tko hoće, neka pusha izmjene na GitHuba i tako napravi novi deploy na Netlify :)
-
 
 SAVJET:
 
@@ -210,20 +179,17 @@ SAVJET:
 
 2. Ne zaboravite ispravno importati Greet u UserInfo.
 
+---
 
-------------
 # Vježba: State
 
 Trajanje: 20min (21:00)
 
-
 U postojećoj React aplikaciji potrebno je napraviti sljedeće:
-
 
 1. Preseliti LikeButton komponentu u zaseban modul unutar components mape
 
 1a. Importati i koristiti LikeButton komponentu u App komponenti
-
 
 2. Doraditi CoinToss komponentu na sljedeći način:
 
@@ -233,11 +199,9 @@ U postojećoj React aplikaciji potrebno je napraviti sljedeće:
 
 2c. Prikazati rezultat u komponenti
 
-
 BONUS:
 
 Push na repo, deploy na Netlify :)
-
 
 SAVJET:
 
@@ -245,15 +209,13 @@ SAVJET:
 
 - https://www.w3schools.com/react/react_state.asp
 
-------------
+---
 
 # Vježba: Statefull i stateless components
 
 Trajanje: 30min (20:20)
 
-
 U postojećoj React aplikaciji potrebno je napraviti sljedeće:
-
 
 1. Preseliti LikeButton komponentu u mapu components/LikeButton
 
@@ -265,31 +227,25 @@ U postojećoj React aplikaciji potrebno je napraviti sljedeće:
 
 1d. Koristimo stateful komponentu LikeButton u App.js
 
-
 2. Prezentacijskoj komponenti LikeButton definirati PropTypes
 
-
 3. Prezentacijskoj komponenti CoinToss definirati PropTypes
-
 
 BONUS:
 
 Push na repo, deplo na Netlify :)
 
-
 SAVJET:
 
 1. Nemojte prepisivati LikeButton logički iz funkcije u klasu, koristite ovo što imate.
 
-------------
+---
 
 # Vježba: Props, state, forms, itd.
 
 Trajanje: 35min (19:35)
 
-
 U postojećoj React aplikaciji potrebno je napraviti sljedeće:
-
 
 1. U MessageForm komponentu dodati input za naslov poruke
 
@@ -298,7 +254,6 @@ U postojećoj React aplikaciji potrebno je napraviti sljedeće:
 1b. Input treba biti type text
 
 1c. Input se treba uzeti u obzir kada se submita obrazac (mora biti dio statea obrasca na submit obrasca)
-
 
 2. U components mapi definirati novu komponentu Message
 
@@ -316,34 +271,29 @@ U postojećoj React aplikaciji potrebno je napraviti sljedeće:
 
 2g. Koristiti Message komponentu (komponenta za prikaz poruke) u App komponenti umjesto trenutnog prikaza
 
-
 BONUS:
 
 1. Razdvojite MessageForm na stateful i stateless dio
 
 2. Push na repo, deplo na Netlify :)
 
-------------
+---
 
 # Vježba: Liste
 
 Trajanje: 45min (19:35)
 
-
 Na postojećoj aplikaciji potrebno je napraviti sljedeće:
-
 
 1. U App komponenti promijeniti state tako da se pohranjuje niz poruka, a ne jedna poruka
 
 1a. Inicijalno stanje statea je prazan niz
-
 
 2. U App komponenti napisati funkciju za rukovanje onSendMessage eventom (prop) od MessageForm komponente
 
 2a. Funkcija će pimiti message object iz MessageForm (dobiven na submit obrasca)
 
 2b. Funkcija će dodati message object u niz koji je dio statea App komponente (vidi točku 1)
-
 
 3. U App komponenti ispisati poruke iz niza u stateu
 
@@ -353,13 +303,11 @@ Na postojećoj aplikaciji potrebno je napraviti sljedeće:
 
 3c. Ako je array u stateu pun, samo prikazati poruke u arrayju (bez dodatnih poruka) prema točki 3a
 
-
 SAVJET:
 
 1. Kod upisivanja poruke u array napraviti novi array koji će sadržavati sve trenutne poruke i staviti novu poruku na vrh ili početak, i stavite ga u state. ([...messageObjects, messageObject]).
 
 2. Ne brinite previše oko keyja, možete za početak koristiti index elementa poruke u nizu.
-
 
 BONUS:
 
@@ -367,20 +315,17 @@ BONUS:
 
 2. Urediti CSS da liči na nešto :D
 
-------------
+---
 
 # Vježba: Obrasci
 
 Trajanje: 30min (19:25)
 
-
 Na postojećoj aplikaciji potrebno je napraviti sljedeće:
-
 
 1. U MessageForm zamijeniti sve text input elemente sa novom TextInput komponentom
 
 1a. Povezati TextInput komponente sa stateom obrasca tako da je aplikacija i dalje funkcionalna
-
 
 2. U components mapu dodati komponentu Checkbox
 
@@ -390,7 +335,6 @@ Na postojećoj aplikaciji potrebno je napraviti sljedeće:
 
 2c. Povezati Checkbox komponentu sa stateom obrasca tako da je aplikacija i dalje funkcionalna
 
-
 3. U components mapu dodati komponentu FormButton
 
 3a. Implementirati Button komponentu kako mislite da je najbolje :)
@@ -399,11 +343,9 @@ Na postojećoj aplikaciji potrebno je napraviti sljedeće:
 
 3c. Povezati FormButton komponentu sa obrascem tako da je aplikacija i dalje funkcionalna
 
-
 SAVJET:
 
 1. Držite se šablone koju smo do sada radili (TextInput komponenta).
-
 
 BONUS:
 
@@ -411,7 +353,37 @@ BONUS:
 
 2. Urediti CSS da liči na nešto :D
 
-------------
+---
+
+Vježba: HOC
+
+Trajanje: 20min (20:20)
+
+Na postojećoj aplikaciji potrebno je napraviti sljedeće:
+
+1. U Message komponenti napraviti 3 HOC (higher-order component)
+
+1a. Napraviti HOC withUserInfo koji prima komponentu i rendera ju u paru sa UserInfo komponentom
+
+1b. Napraviti HOC withUniqueId koji prima komponentu i rendera ju u paru sa UniqueId komponentom
+
+1c. Napraviti HOC withCurrentDate koji prima komponentu i rendera ju u paru sa CurrentDate komponentom
+
+2. Iz components/Message/index.js napraviti named export MessageWithHoc komponente koja koristi sve HOC na Message komponenti
+
+3. Koristiti named export za prikaz poruke u aplikaciji (zamijeniti sa postojećim Message)
+
+SAVJET:
+
+1. Držite se šablone koju smo do sada radili (App i withSmiley HOC).
+
+2. Ne zaboravite da radite s funkcijama, za točku 2 treba vam njihova kompozicija :)
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :)
+
+---
 
 # Getting Started with Create React App
 
