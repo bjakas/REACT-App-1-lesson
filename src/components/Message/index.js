@@ -4,7 +4,7 @@ import CurrentDate from "../CurrentDate"
 import "./Message.css";
 //import { Component } from "react";
 
-export default function Message({ isImportant, message, title, children }) {
+export default function Message({ isImportant, message, title, children }) { // message prima i children da može prikazati child elemente
   if (message === '' || message == null) { // poruku prikazujemo samo ako je message prazan string ili ako message nije null
     return null; // ako je gornje točno vraćamo null pa se komponenta neće crtati
   }
@@ -26,23 +26,30 @@ export default function Message({ isImportant, message, title, children }) {
   );
 }
 
+// HOC prima componentu i rendera ju u paru s UserInfo componentom
+// kada koristimo HOC onda je HOC zadužen za to da propusti propse do componente
+
 function withUserInfo(Component) {
   return function(props) { 
     return (
     console.log("withUserInfo", props),
-    <Component {...props}>withUserInfo</Component>
+    <Component {...props}>withUserInfo</Component> // ispisat će se child withUserInfo
     );
   }
 }
+
+// HOC prima componentu i rendera ju u paru s UniqueId componentom
 
 function withUniqueId(Component) {
   return function(props)
    { return (
     console.log("withUniqueId", props),
-     <Component {...props}>withUniqueId</Component>
+     <Component {...props}>withUniqueId</Component> // ako želimo da komponenta dobije propse moramo ih i proslijediti 
    )
      }
 }
+
+// HOC prima componentu i rendera ju u paru s CurrentDate componentom
 
 function withCurrentDate(Component) {
   return function(props)
@@ -53,10 +60,14 @@ function withCurrentDate(Component) {
     }
 }
 
+// named export MessageWithHoc componente koja koristi sve HOC na message componenti
+// HOK-ove nižemo jedan u drugi
+
 export const MessageWithHoc = withUserInfo(
   withUniqueId(
     withCurrentDate(Message)
     )
   );
 
-  // DZ probajte naći rješenje kako prikazati children props od svih HOC-ova; cloneElement, render props, itd; https://reactjs.org/docs/react-api.html; https://medium.com/@justynazet/passing-props-to-props-children-using-react-cloneelement-and-render-props-pattern-896da70b24f6
+  // DZ probajte naći rješenje kako prikazati children props od svih HOC-ova (jer smo trenutno prepisali preko i svaka naredna componenta prepisuje prethodni children, trebamo vidjeti kako sačuvati taj children); 
+  // react.children, cloneElement, render props, itd; https://reactjs.org/docs/react-api.html; https://medium.com/@justynazet/passing-props-to-props-children-using-react-cloneelement-and-render-props-pattern-896da70b24f6

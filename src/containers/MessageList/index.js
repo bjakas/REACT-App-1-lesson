@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import ChatContext from "../../contexts/ChatContext";
-import {MessageWithHoc as Message} from "../Message";
+import {MessageWithHoc as Message} from "../../components/Message"; // nazvali smo ga Message (dali smo mu alias) da dolje ne moramo mijenjati naziv componente
 
 export default function MessageList() {
   const messageObjects = useContext(ChatContext);
+  console.log(messageObjects);
 
   return (
     <div className="MessageList">

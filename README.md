@@ -379,6 +379,8 @@ SAVJET:
 
 2. Ne zaboravite da radite s funkcijama, za točku 2 treba vam njihova kompozicija :)
 
+3. HOC možete definirati u Message/index.js i ne morate ih pojedinačno exportati van, neka žive uz Message function komponentu
+
 BONUS:
 
 1. Push na GitHub, deploy na Netlify :)

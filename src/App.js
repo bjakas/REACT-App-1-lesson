@@ -18,29 +18,41 @@
         <UserInfo />
 */
 import './App.css';
-import MessageForm from './components/MessageForm';
+import MessageForm from './containers/MessageForm';
 import { useContext, useState } from "react";
 //import Message from './components/Message';
 //import { getId } from './helpers';
 import AppContext from "./contexts/AppContext"; // sada importamo context da bismo mogli koristiti njegov consumer
 import ChatContext from './contexts/ChatContext';
-import MessageList from './components/MessageList';
+import MessageList from './containers/MessageList';
 
 /*
+
 function greet(greeting, name) {
-  console.log(greeting, name);
+  console.log(greeting, name); // Hello Domagoj
 }
 greet("Hello", "Domagoj");
+greet("Hello", "Domagoj :)");
+greet("Hello", "Matija :)");
+greet("Hello", "Igor :)");
 
 
-// HOF - higher order function
+// HOF - higher order functions primjeri
+
+function withAloha(greetFunction){
+  return function (name) {
+    greetFunction("Aloha", name);
+  }
+}
 
 function withSmile(greetFunction) {
   return function (greeting, name) {
     greetFunction(greeting, name);
-    console.log(":)");
+    console.log(":)"); // :)
   }
 }
+const aloha = withAloha(greet);
+aloha("Domagoj");
 const smileyGreeting = withSmile(greet);
 smileyGreeting("Hello", "Domagoj");
 */
@@ -62,7 +74,8 @@ i od return
 
 function App() {
   const appContext = useContext(AppContext); // prosljeđujemo context (uz useContext hook) koji želimo koristiti - dobit ćemo objekt našeg contexta
-  console.log(appContext); // ispišemo objekt stanja da vidimo što smo dobili
+  const chatContext= useContext(ChatContext);
+  //console.log(appContext); // ispišemo objekt stanja da vidimo što smo dobili
   // const [messageObject, setMessageObject] = useState(null); // dali smo ime stateu messageObject, a funkciji setMessageObject; na submit spremamo zadnje aktualno stanje
   //const chatContext = useContext(ChatContext);
 
@@ -72,7 +85,7 @@ function App() {
     setMessageObjects([...messageObjects, messageObject]); // 2b u naš state šaljemo sve što se nalazi u trenutnom arrayu; setMessageObject funkcija za setanje statea;state je messageObjects a messageObject je ono što smo dobili u poruci, novi objekt
   };
 
-  //console.log(chatContext, messageObjects);
+  console.log(chatContext, messageObjects);
 
   /**
    * iz returna smo maknuli
@@ -91,7 +104,7 @@ function App() {
   messageObjects.length > 0 && messageObjects.map((messageObject, index) ili s obzirom da mapiranje niza s nula elemenata dobijemo niz s nula el. pa pišemo kao niže skraćeno jer nema ne treba provjera {messageObjects.map((messageObject, index) => ...
   */
 
-
+  // našem ChatContext.Provideru niže value je ujedno i state; mi smo napravili context koji ima kontrolirani value od strane statea
   return (
     <ChatContext.Provider value={messageObjects}>
       <div className="App">
@@ -122,6 +135,7 @@ function App() {
 
 }
 
+// HOC comp. koja uzima comp. rendera ju i nalijepi smajlic
   function withSmile(Component) {
     return function() {
       return (
@@ -133,7 +147,7 @@ function App() {
     }
   }
   
-  export default withSmile(App);
+  export default withSmile(App); // App componentu umotamo u withSmile i exportamo van
 
 //export default App;
 
