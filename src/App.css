@@ -25,6 +25,10 @@
   margin: 16px 0;
 }
 .App-link {
-  color: #EE8666;
+  color: #ee8666;
   text-decoration: none;
+}
+
+a.active {
+  color: red;
 }

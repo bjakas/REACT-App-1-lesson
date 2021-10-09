@@ -2,8 +2,8 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import TextInput from "../../components/TextInput";
 import Checkbox from "../../components/Checkbox";
-import "./MessageForm.css";
 import FormButton from "../../components/FormButton";
+import "./MessageForm.css";
 
 export default function MessageForm({ onSendMessage }) {
   const [state, setState] = useState({

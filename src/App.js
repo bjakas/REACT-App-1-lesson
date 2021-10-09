@@ -18,16 +18,16 @@
         <UserInfo />
 */
 import './App.css';
-import MessageForm from './containers/MessageForm';
 import { useContext, useState } from "react";
 //import Message from './components/Message';
 //import { getId } from './helpers';
 import AppContext from "./contexts/AppContext"; // sada importamo context da bismo mogli koristiti njegov consumer
 import ChatContext from './contexts/ChatContext';
+import MessageForm from './containers/MessageForm';
 import MessageList from './containers/MessageList';
+import AppRouter from './pages/AppRouter';
 
 /*
-
 function greet(greeting, name) {
   console.log(greeting, name); // Hello Domagoj
 }
@@ -74,7 +74,7 @@ i od return
 
 function App() {
   const appContext = useContext(AppContext); // prosljeđujemo context (uz useContext hook) koji želimo koristiti - dobit ćemo objekt našeg contexta
-  const chatContext= useContext(ChatContext);
+  const chatContext = useContext(ChatContext);
   //console.log(appContext); // ispišemo objekt stanja da vidimo što smo dobili
   // const [messageObject, setMessageObject] = useState(null); // dali smo ime stateu messageObject, a funkciji setMessageObject; na submit spremamo zadnje aktualno stanje
   //const chatContext = useContext(ChatContext);
@@ -107,6 +107,7 @@ function App() {
   // našem ChatContext.Provideru niže value je ujedno i state; mi smo napravili context koji ima kontrolirani value od strane statea
   return (
     <ChatContext.Provider value={messageObjects}>
+      <AppRouter />
       <div className="App">
         <header className="App__header">
           <h1>My Chat App {appContext.language}</h1>
@@ -135,19 +136,20 @@ function App() {
 
 }
 
-// HOC comp. koja uzima comp. rendera ju i nalijepi smajlic
-  function withSmile(Component) {
-    return function() {
-      return (
+// HOC comp. koja uzima comp. rendera ju i nalijepi smajlic; u principu s donjim nadodajemo jedan element na postojeće
+
+function withSmile(Component) {
+  return function () {
+    return (
       <div>
         <Component />
         <div>":)"</div>
       </div>
-      );
-    }
+    );
   }
-  
-  export default withSmile(App); // App componentu umotamo u withSmile i exportamo van
+}
 
-//export default App;
+export default withSmile(App); // App componentu umotamo u withSmile i exportamo van
+
+//export default App; ako nemamo HOC onda sam exportamo vani App
 

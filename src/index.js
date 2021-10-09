@@ -6,15 +6,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppContext from "./contexts/AppContext"; // sada čitava aplikacija ima pristup contextu // da ne dobijemo grešku trebamo definirati vrijednost koju će naš provider provideat
 import { getId } from "./helpers"; // tu dobijemo fiksni ID koji se ne mijenja
+import { BrowserRouter } from "react-router-dom";
 
 
 // provider može providati fiksni value=({ language: "hr", id: getId() }), ali može providati i state, neko stanje aplikacije koje može biti dostupno na globalnijoj razini
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContext.Provider value={{ language: "hr", id: getId() }}>
-      <App />
-    </AppContext.Provider>
+    <BrowserRouter>
+      <AppContext.Provider value={{ language: "hr", id: getId() }}>
+        <App />
+      </AppContext.Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

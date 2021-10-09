@@ -387,6 +387,38 @@ BONUS:
 
 ---
 
+# Vježba: React Router
+
+Trajanje: 30min (21:00)
+
+Na postojećoj aplikaciji potrebno je napraviti sljedeće:
+
+1. U pages mapu dodati dvije komponente (stranice)
+
+1a. Napraviti page SignInPage u mapi pages koji će ispisati h1 naslov "Sign in"
+
+1b. Napraviti page ChatPage u mapi pages koji će ispisati h1 naslov "Chat"
+
+2. U AppRouter komponenti implementirati router koji će otvarati SignInpage na pathu "/", a ChatPage na pathu "/chat"
+
+3. U AppRouter routeru dodati rutu koja će preusmjeriti korisnika na "/" ako pokuša posjetiti bilo koji drugi path
+
+SAVJET:
+
+1. Koliko i kakvog sadržaja ćete staviti u pageve je proizvoljno :)
+
+2. Redirect pogledajte u primjerima iz react-router dokumentacije
+
+3. Samu App komponentu ne morate dirati, nećemo još seliti logiku za chat u zaseban page (to vam je za zadaću)
+
+4. Ove postojeće pageve u routeru možete obrisati
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :) proučiti - https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
