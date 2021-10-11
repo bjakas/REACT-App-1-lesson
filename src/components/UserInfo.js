@@ -1,4 +1,4 @@
-import { getRandomName, getRandomColor } from "../random";
+import { getRandomColor, getRandomName } from "../helpers/random";
 import Greet from "./Greet"; // prvo importamo Greet da ga možemo koristiti
 
 export default function UserInfo() {

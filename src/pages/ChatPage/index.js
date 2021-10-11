@@ -24,7 +24,7 @@ export default function ChatPage() {
       </main>
       <footer className="ChatPage__footer">
         <a
-          href="https://github.com/dstrekelj"
+          href="https://github.com/bjakas"
           target="_blank"
           rel="noopener noreferrer"
         >
