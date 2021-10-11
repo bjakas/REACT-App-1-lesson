@@ -1,0 +1,18 @@
+.TextInput {
+  position: relative;
+}
+
+.TextInput label {
+  display: block;
+  width: 100%;
+}
+
+.TextInput input {
+  display: block;
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 2rem;
+  margin-top: 0.25rem;
+  border: 1px solid black;
+  border-radius: 0px;
+}

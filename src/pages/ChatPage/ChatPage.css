@@ -1,0 +1,22 @@
+.ChatPage {
+  width: calc(100% - 32px);
+  max-width: 480px;
+  margin: 32px auto;
+}
+
+.ChatPage__title {
+  text-align: center;
+}
+
+.ChatPage__main {
+  margin: 64px 0;
+}
+
+.ChatPage__footer {
+  margin: 32px 0;
+  text-align: center;
+}
+
+a.active {
+  color: red;
+}

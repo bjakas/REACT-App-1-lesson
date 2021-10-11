@@ -9,12 +9,11 @@ html {
 
 body {
 	background: #fff;
-	text-align: center;
 	font-size: 1rem;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 input, textarea, button, select {
