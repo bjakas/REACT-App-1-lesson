@@ -418,6 +418,81 @@ BONUS:
 1. Push na GitHub, deploy na Netlify :) proučiti - https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/
 
 ---
+# Vježba: REST API
+
+Trajanje: 20min (20:05)
+
+
+U postojećoj React aplikaciji doraditi sljedeće:
+
+
+1. U NasaPage komponenti dodati podršku za grešku (error) pri slanju zahtjeva
+
+1a. U slučaju da fetch promise bude rejectan i dođe do hvatanja (catch) greške, uhvatiti grešku i prikazati poruku po izboru u aplikaciji
+
+1b. Poruka se mora prikazati kroz JSX, a ne kao alert, console.log, ili slično
+
+
+2. Odvojiti NasaVideo komponentu unutar NasaPage u zasebnu komponentu u components/ mapi
+
+2a. Koristiti NasaVideo komponentu iz components/ mape u NasaPage komponenti
+
+
+3. Odvojiti NasaImage komponentu unutar NasaPage u zasebnu komponentu u components/ mapi
+
+3a. Koristiti NasaImage komponentu iz components/ mape u NasaPage komponenti
+
+
+SAVJET:
+
+1. Grešku u fetch izazove tako što koristite krivi URL (npr. umjesto HTTPS napišete XYZ)
+
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :)
+
+2. Uredite CSS po izboru
+
+---
+
+# Vježba: GraphQL
+
+Trajanje: 20min (21:05)
+
+
+U postojećoj React aplikaciji doraditi sljedeće:
+
+
+1. U ExchangeRates komponentu dodati prop currency koji prima string vrijednost
+
+1a. Prop currency koristiti u GraphQL query kako bi se umjesto "EUR" mogla koristiti valuta po izboru
+
+
+2. U ExchangeRates komponentu dodati prop limit koji prima number vrijednost
+
+2a. Prop limit koristiti kod mapiranja rezultata tako da se ograniči broj prikazanih tečajeva (npr. ako je limit 10, prikazat će se prvih deset rezultata)
+
+
+3. U ExchangeRatePage komponenti dodati dvije ExchangeRates komponente,
+
+3a. Jedna komponenta treba prikazati tečajnu listu za EUR, prvih 10 rezultata
+
+3b. Druga komponenta treba prikazati tečajnu listu za HRK, prvih 5  rezultata
+
+
+SAVJET:
+
+1. Za ubacivanje currency u GraphQL query koristite interpolaciju varijabli jer je riječ o template literalu
+
+
+BONUS:
+
+1. Push na GitHub, deploy na Netlify :)
+
+2. Uredite CSS po izboru
+
+---
 
 # Getting Started with Create React App
 
