@@ -26,7 +26,7 @@ export default function AppRouter() {
   )
 }
 
-/* PRIMJER S PREDAVANJE
+/* PRIMJER S PREDAVANJA
 
 // kao arrow f. const IndexPage = () => <h1>Index <Link to="/blog">Blog</Link></h1>; s time da onda Link importamo
 

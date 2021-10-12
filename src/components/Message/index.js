@@ -23,6 +23,10 @@ export default function Message({
   );
 }
 
+// koristimo Children API iz Reacta
+// children koji primimo pretvorimo u niz i onda u taj niz koji spreadamo ubacimo našu novu komponentu
+// time svaki sljedeći child upiše u children svoj element u taj niz kojeg smo kreirali children
+
 function withUserInfo(Component) {
   return function (props) {
     const children = [

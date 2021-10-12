@@ -471,7 +471,7 @@ U postojećoj React aplikaciji doraditi sljedeće:
 
 2. U ExchangeRates komponentu dodati prop limit koji prima number vrijednost
 
-2a. Prop limit koristiti kod mapiranja rezultata tako da se ograniči broj prikazanih tečajeva (npr. ako je limit 10, prikazat će se prvih deset rezultata)
+2a. Prop limit koristiti kod mapiranja rezultata tako da se ograniči broj prikazanih tečajeva (npr. ako je limit 10, prikazat će se prvih deset rezultata) - slice ili s for petljom napravimo novi niz i onda ga mapiramo
 
 
 3. U ExchangeRatePage komponenti dodati dvije ExchangeRates komponente,
