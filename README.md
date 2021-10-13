@@ -494,6 +494,47 @@ BONUS:
 
 ---
 
+#Vježba: REDUX
+
+Trajanje: 30min (20:25)
+
+
+U postojećoj aplikaciji doraditi sljedeće...
+
+
+1. Napraviti komponentu OrderList unutar OrderPage komponente
+
+1a. Komponentu OrderList putem useSelector() hooka povezati na orderStore
+
+1b. Za svaki order u storeu prikazati komponentu unutar OrderList (mapirati iteme u komponente)
+
+
+2. Doraditi OrderForm komponentu
+
+2a. Omogućiti unos u input element putem useState() hooka (učiniti obrazac funkcionalnim po uzoru na MessageForm)
+
+2b. Stanje obrasca (vrijednost input elementa) poslati (dispatch) kao text našeg order itema
+
+2c. Nakon submita obrisati vrijednost inputa u obrascu (na submit cleara se input, ne vidimo više ono što je bilo upisano kada se obrazac submitao)
+
+
+SAVJET:
+
+1. Za obrazac se konzultirajte sa MessageForm
+
+2. Za listu se konzultirajte sa MessageList
+
+
+BONUS:
+
+1. Dodajte dugme za brisanje narudžbi ("Delete orders" ili slično). Brisanje narudžbi mora biti implementirano kroz novu redux akciju npr. DELETE_ALL_ORDER_ITEMS. Klik na dugme dispatcha akciju koja briše order iteme (odnosno stavlja stanje na prazan array).
+
+2. Push na GitHub, deploy na Netlify :)
+
+3. Uredite CSS po izboru
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
