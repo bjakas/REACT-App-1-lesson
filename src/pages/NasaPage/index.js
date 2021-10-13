@@ -23,7 +23,7 @@ export default function NasaPage() {
       })
       .then(json => setState(json))
       .catch(error => setError(error)); // grešku spremimo u state
-  }, []);
+  }, []); // niz ako je prazan jednom se okine?
 
   // ako je state null dok se podatci još nisu povukli upišemo loading
   if (state === null) {

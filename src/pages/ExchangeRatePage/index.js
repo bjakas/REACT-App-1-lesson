@@ -5,7 +5,7 @@ import { ApolloProvider, useQuery } from "@apollo/react-hooks";
 // da bismo mogli koristiti client moramo ga upariti sa ApolloProviderom
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io'
+  uri: 'https://48p1r2roz4.sse.codesandbox.io' // uri nije lokator nego identifikator
 });
 
 // napravimo componentu koja će nam prikazati tečajnu listu
